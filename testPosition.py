@@ -43,10 +43,11 @@ def action_wrapper(hermes, intentMessage, conf):
     """ 
     city = intentMessage.slots.city.first().value
     
-    headers = {'accept': 'application/json', 'authorization': 'Basic anVub246UlFXSnVub25YcG0yWA=='}
-    response = requests.get('https://junon---develop-sr3snxi-ma2sa5nwhuqdk.fr-1.platformsh.site/v1/status', auth=('junon', 'RQWJunonXpm2X'))
-    data = res.json()
-    aqi = data['breezometer_aqi']
+    #headers = {'accept': 'application/json', 'authorization': 'Basic anVub246UlFXSnVub25YcG0yWA=='}
+    #response = requests.get('https://junon---develop-sr3snxi-ma2sa5nwhuqdk.fr-1.platformsh.site/v1/status', auth=('junon', 'RQWJunonXpm2X'))
+    #data = res.json()
+    #aqi = data['breezometer_aqi']
+    aqi = 90
     
     quality_word = 'mauvaise'
     if aqi >= 80:
