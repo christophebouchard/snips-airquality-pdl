@@ -44,7 +44,7 @@ def action_wrapper(hermes, intentMessage, conf):
     city = intentMessage.slots.city.first().value
     
     headers = {'accept': 'application/json', 'authorization': 'Basic anVub246UlFXSnVub25YcG0yWA=='}
-    response = requests.get('https://junon---develop-sr3snxi-ma2sa5nwhuqdk.fr-1.platformsh.site/v1/air/quality?lat=48.86842&lon=2.23473', auth=('junon', 'RQWJunonXpm2X'), timeout=5)
+    response = requests.get('https://junon---develop-sr3snxi-ma2sa5nwhuqdk.fr-1.platformsh.site/v1/status', auth=('junon', 'RQWJunonXpm2X'))
     data = res.json()
     aqi = data['breezometer_aqi']
     
