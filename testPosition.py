@@ -41,7 +41,7 @@ def action_wrapper(hermes, intentMessage, conf):
     - conf : a dictionary that holds the skills parameters you defined 
     Refer to the documentation for further details. 
     """ 
-    city = intentMessage.slots.city.first().value
+    city = intentMessage.slots.position.first().value
     
     #headers = {'accept': 'application/json', 'authorization': 'Basic anVub246UlFXSnVub25YcG0yWA=='}
     #response = requests.get('https://junon---develop-sr3snxi-ma2sa5nwhuqdk.fr-1.platformsh.site/v1/status', auth=('junon', 'RQWJunonXpm2X'))
